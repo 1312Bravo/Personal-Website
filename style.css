@@ -624,7 +624,7 @@ interests_list li {
         display: grid;
         grid-gap: 0px;
         grid-template-columns: repeat(7, 1fr);
-        grid-template-rows: 50px 230px 80px 60px;
+        grid-template-rows: 50px 230px 80px 150px;
         grid-template-areas:
             "a a a u u u u"
             "a a a b b b b"
@@ -665,7 +665,7 @@ interests_list li {
         }
 
     .Interests_list {
-        margin-top: 0px;
+        margin: auto;
         text-align: center;
     }
 
