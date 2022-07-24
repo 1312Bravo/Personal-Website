@@ -477,7 +477,7 @@ interests_list li {
 
 
 .skills .progress-bar .bar .sql {
-    width: 25%;
+    width: 15%;
     grid-area: s5;
     animation: sql 2s;
 }
@@ -488,7 +488,7 @@ interests_list li {
     }
 
     100% {
-        width: 25%
+        width: 15%
     }
 }
 
@@ -561,7 +561,7 @@ interests_list li {
     grid-gap: 2px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 250px);
+    grid-template-rows: auto auto;
     grid-template-areas:
         "ab"
         "prew";
@@ -572,12 +572,12 @@ interests_list li {
 .project-about {
     position: relative;
     grid-area: ab;
-    margin: 0px auto;
+    margin: 0 auto;
 }
 
 .project-about-title {
     text-align: center;
-    font-size: 24px;
+    font-size: 32px;
     color: black;
     margin: 15px auto;
 }
@@ -594,21 +594,27 @@ interests_list li {
 }
 
 .project-about-date {
-    position: absolute;
-    bottom: 2%;
-    left: 2%;
+    margin: 10px;
 }
 
 .project-preview {
-    margin: 0 auto;
     text-align: center;
     grid-area: prew;
-    font-size: 48px;
+    font-size: 28px;
     display: flex;
     align-items: center;
+    width: 70%;
+    margin: 10px auto;
 }
 
+    .project-preview:hover {
+        font-size: 32px;
+    }
 
+    .language {
+    margin-left: 10px;
+    color: lightslategray;
+}
 
 /*********************************************************************************************************************************/
 @media (min-width: 58em) {
@@ -696,13 +702,32 @@ interests_list li {
         width: 70%;
         display: grid;
         grid-gap: 0px;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(1, 250px);
         grid-template-areas:
-            "ab prew"
+            "ab ab ab prew prew"
     }
 
-    .education-title{
+    .project-about-date {
+        margin: 0;
+        position: absolute;
+        bottom: 2%;
+        left: 2%;
+    }
+
+    .project-about-summary {
+        margin: 20px 10px;
+    }
+
+    .project-preview {
+        text-align: left;
+        font-size: 36px;
+    }
+
+        .project-preview:hover {
+            font-size: 40px;
+        }
+        .education-title {
         margin-bottom: 24px;
     }
 
