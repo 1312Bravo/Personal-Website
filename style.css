@@ -102,6 +102,11 @@ a{
     font-size: 24px;
 }
 
+    .CV a {
+        padding-bottom: 8px;
+        border-bottom: 1px solid black;
+    }
+
 .CV:hover{
     font-size: 28px;
 }
@@ -250,7 +255,8 @@ interests_list li {
 
     .social-media a {
         font-size: 32px;
-        padding: 15px 15px;
+        padding: 15px 15px 8px 15px;
+        border-bottom: 1px black solid;
     }
 
         .social-media a:hover {
@@ -593,17 +599,23 @@ interests_list li {
 }
 
 .project-preview {
-    text-align: center;
     grid-area: prew;
+    text-align: center;
     font-size: 28px;
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 70%;
     margin: 10px auto;
 }
 
     .project-preview:hover {
         font-size: 32px;
+    }
+
+    .project-photo{
+        padding-bottom: 8px;
+        border-bottom: 1px solid black;
     }
 
     .language {
@@ -716,7 +728,6 @@ interests_list li {
     }
 
     .project-preview {
-        text-align: left;
         font-size: 36px;
     }
 
