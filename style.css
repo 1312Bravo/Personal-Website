@@ -635,8 +635,8 @@ interests_list li {
         grid-template-areas:
             "a a a u u u u"
             "a a a b b b b"
-            "a a a b b b b"
-            "l l l t t t t";
+            "l l l b b b b"
+            ". . . t t t t";
     }
 
     .ProfilePhoto {
@@ -653,15 +653,15 @@ interests_list li {
         margin-top: 20px;
     }
 
-        .About_text {
-            margin-top: 30px;
-            grid-area: b;
-            padding: 5px 30px;
-        }
+    .About_text {
+        margin-top: 30px;
+        grid-area: b;
+        padding: 5px 30px;
+    }
 
-        .social-media {
-            width: 20%;
-        }
+    .social-media {
+        width: 20%;
+    }
 
     .CV {
         margin-top: 50px;
@@ -683,10 +683,10 @@ interests_list li {
     }
 
     .info-list .info-row {
-        width: 20%;
+        width: 30%;
     }
 
-    .progress-bar{
+    .progress-bar {
         width: 50%;
     }
 
@@ -711,7 +711,7 @@ interests_list li {
         display: grid;
         grid-gap: 0px;
         grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(1, 250px);
+        grid-template-rows: repeat(1, auto);
         grid-template-areas:
             "ab ab ab prew prew"
     }
@@ -724,7 +724,7 @@ interests_list li {
     }
 
     .project-about-summary {
-        margin: 20px 10px;
+        margin: 20px 10px 40px 10px;
     }
 
     .project-preview {
@@ -734,7 +734,8 @@ interests_list li {
         .project-preview:hover {
             font-size: 40px;
         }
-        .education-title {
+
+    .education-title {
         margin-bottom: 24px;
     }
 
@@ -742,3 +743,8 @@ interests_list li {
         width: 60%;
         padding-bottom: 12px;
     }
+
+    .social-media ul {
+        column-gap: 22px;
+    }
+}
