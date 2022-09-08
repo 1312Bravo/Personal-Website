@@ -139,6 +139,7 @@ a {
     align-items: center;
     text-align: center;
     margin-top: 20px;
+    font-size: 18px;
 }
 
     .Interests_list ul {
@@ -718,7 +719,7 @@ interests_list li {
         grid-area: l;
         margin: auto;
         text-align: center;
-
+        
     }
 
     .basic-info {
