@@ -1,5 +1,13 @@
 ﻿/* https://superdevresources.com/html-resume-templates/ */
 
+:root {
+    --first-color: white;
+    --second-color: orange;
+    --third-color: #909090;
+    --main-title-color: red;
+    --bckg-color: black;
+}
+
 
 * {
     margin: 0;
@@ -10,8 +18,8 @@
 }
 
 body {
-    background-color: white;
-    color: black;
+    background-color: var(--bckg-color);
+    color: var(--first-color);
     height: auto;
     width: 100vw;
     margin: 0;
@@ -20,8 +28,13 @@ body {
     font-size: 100%;
 }
 
-a{
-    color: black;
+a {
+    /*color: black;*/
+    color: var(--first-color);
+}
+
+.clrd1{
+    color: var(--second-color)
 }
 
 /*********************************************************************************************************************************/
@@ -30,17 +43,18 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    /*color: black;*/
     padding: 0.3rem 1rem;
 }
 
-.navbar_links a{
-    color: black;
+.navbar_links a {
+    /*color: black;*/
+    color: var(--first-color);
     font-size: 16px;
 }
 
     .navbar_links a:hover {
-        font-weight:bolder;
+        font-weight: bolder;
     }
 
 .navbar_links ul {
@@ -48,18 +62,19 @@ a{
     list-style-type: none;
 }
 
-.navbar_links ul li{
-    padding: 20px;
-}
+    .navbar_links ul li {
+        padding: 20px;
+    }
 
 .navbar_links a.active {
-    color: lightslategray;
+    /*color: lightslategray;*/
+    color: orange;
 }
 
 /*********************************************************************************************************************************/
 
 .About {
-    background: white;
+    /*background: black;*/
     width: 100%;
     margin: 0 auto;
 }
@@ -76,7 +91,7 @@ a{
         display: block;
         margin: auto;
         width: 60%;
-        background: linear-gradient(15deg, yellow, orange, red); 
+        background: linear-gradient(15deg, #FF5F1F, #FFBF00);
         padding: 5px;
     }
 
@@ -104,15 +119,16 @@ a{
 
     .CV a {
         padding-bottom: 8px;
-        border-bottom: 1px solid black;
+        /*border-bottom: 1px solid black;*/
+        border-bottom: 1px solid var(--third-color);
     }
 
-.CV:hover{
-    font-size: 28px;
-}
+    .CV:hover {
+        font-size: 28px;
+    }
 
 
-.fa-download{
+.fa-download {
     margin-left: 10px;
 }
 
@@ -134,26 +150,28 @@ a{
 interests_list li {
     margin: 24px 0;
     padding-bottom: 2px;
-    border-bottom: 1px solid black;
+    /*border-bottom: 1px solid black;*/
+    border-bottom: 1px solid var(--third-color);
 }
 
 
 /*********************************************************************************************************************************/
 .basic-info {
     margin: 0 auto 20px auto;
-    background: white;
+    /*background: white;*/
     text-align: center;
 }
 
     .basic-info .info-title {
         text-align: center;
         font-size: 28px;
-        color: black;
+        /*color: black;*/
+        color: var(--first-color);
         margin: 0px auto 20px auto;
     }
 
 .info-list {
-    background: white;
+    /*background: white;*/
     margin: auto;
     display: grid;
     grid-gap: 0px;
@@ -185,7 +203,7 @@ interests_list li {
     }
 
     .info-list .info-row {
-        background: white;
+        /*background: white;*/
         text-align: left;
         margin: 0 auto;
         width: 80%;
@@ -200,20 +218,22 @@ interests_list li {
         .info-list .info-row .col1 {
             text-align: center;
             grid-area: c1;
-            border-bottom: 1px lightslategray solid;
+            /*border-bottom: 1px lightslategray solid;*/
+            border-bottom: 1px var(--third-color) solid;
         }
 
         .info-list .info-row .col2 {
             text-align: center;
             grid-area: c2;
-            border-bottom: 1px lightslategray solid;
+            /*border-bottom: 1px lightslategray solid;*/
+            border-bottom: 1px var(--third-color) solid;
         }
 
 
 
 /*********************************************************************************************************************************/
 .Kvovt {
-    background-color: white;
+    /* background-color: white;*/
     color: #808080;
     font-size: large;
     text-align: center;
@@ -227,16 +247,17 @@ interests_list li {
 /*********************************************************************************************************************************/
 
 .social-media {
-    background: white;
+    /*background: white;*/
     margin: 10px auto;
     width: 85%;
 }
 
-.social-media .second-title{
-    text-align: center;
-    font-size: 28px;
-    color: black;
-}
+    .social-media .second-title {
+        text-align: center;
+        font-size: 28px;
+        /*color: black;*/
+        color: var(--first-color);
+    }
 
     .social-media ul {
         justify-content: center;
@@ -256,7 +277,8 @@ interests_list li {
     .social-media a {
         font-size: 32px;
         padding: 15px 15px 8px 15px;
-        border-bottom: 1px black solid;
+        /*border-bottom: 1px black solid;*/
+        border-bottom: 1px var(--third-color) solid;
     }
 
         .social-media a:hover {
@@ -268,7 +290,7 @@ interests_list li {
 .send-mail .container {
     margin: 0 20px;
     padding: 20px 0;
-    background: white;
+    /*background: white;*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -277,13 +299,14 @@ interests_list li {
 .send-mail .mail-title {
     text-align: center;
     font-size: 28px;
-    color: black;
+    /*color: black;*/
+    color: var(--first-color);
     margin: 0 0 20px 0;
 }
 
 .send-mail .email-inputs {
     display: block;
-    background: white;
+    /*background: white;*/
     width: 110%;
     margin: 0 auto;
     display: grid;
@@ -300,9 +323,9 @@ interests_list li {
         ". . b b b b b . .";
 }
 
-    .email-inputs .adress {
-        grid-area: a;
-    }
+.email-inputs .adress {
+    grid-area: a;
+}
 
 .email-inputs .subject {
     grid-area: s;
@@ -324,24 +347,28 @@ interests_list li {
     margin: 10px;
     padding: 5px 10px;
     border-radius: 20px;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
+    border: 1px solid var(--first-color);
     outline-style: none;
     font-size: 18px;
-    font-weight:500;
+    font-weight: 500;
+    background: var(--bckg-color);
+    color: white;
 }
 
-    .send-mail .email-form:focus{
-        background-color: white;
+    .send-mail .email-form:focus {
+        /*background-color: white;*/
     }
 
     .send-mail .email-form:-webkit-autofill {
         -webkit-box-shadow: 0 0 0 30px white inset !important;
-        -webkit-text-fill-color: black !important;
+        /*-webkit-text-fill-color: black !important;*/
+        /*-webkit-text-fill-color: white !important;*/
     }
 
     .send-mail .email-form::placeholder {
         text-align: center;
-        color: black;
+        color: white;
         /*transform: translate3d(0,24px,0)*/
     }
 
@@ -349,33 +376,37 @@ interests_list li {
     width: 50%;
     padding: 5px;
     margin: 5px auto;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
+    border: 1px solid white;
     border-radius: 20px;
-    background-color: white;
+    /*background-color: white;*/
     font-size: 18px;
-    font-weight:bold;
+    font-weight: bold;
 }
+
     .send-mail .email-button:hover {
-        border: 2px solid black;
+        /*border: 2px solid black;*/
+        border: 2px solid white;
     }
 
 /*********************************************************************************************************************************/
 
 .skills {
     margin: 0 auto 20px auto;
-    background: white;
+    /*background: white;*/
     text-align: center;
 }
 
 .skills-title {
     text-align: center;
     font-size: 28px;
-    color: black;
+    /*color: black;*/
+    color: var(--first-color);
     margin-bottom: 20px;
 }
 
 .skills .progress-bar {
-    background: white;
+    /*background: white;*/
     margin: 0 auto;
     display: grid;
     grid-gap: 0px;
@@ -391,42 +422,44 @@ interests_list li {
         "s5";
 }
 
-.skills .progress-bar .one-skill-title{
-    margin-bottom: 10px;
-}
+    .skills .progress-bar .one-skill-title {
+        margin-bottom: 10px;
+    }
 
-        .skills .progress-bar .bar {
-            margin: 0 auto;
-            background-color: white;
-            width: 85%;
-            height: 6px;
-            border: 1px solid black;
-            border-radius: 1.5rem;
+    .skills .progress-bar .bar {
+        margin: 0 auto;
+        /*background-color: white;*/
+        width: 85%;
+        height: 6px;
+        /*border: 1px solid black;*/
+        border: 1px solid var(--third-color);
+        border-radius: 1.5rem;
+        /*box-shadow: 0 0 10px black;*/
+    }
+
+        .skills .progress-bar .bar span {
             /*box-shadow: 0 0 10px black;*/
+            height: 100%;
+            float: left;
+            /*background-color: black;*/
+            background-color: var(--first-color);
         }
 
-            .skills .progress-bar .bar span {
-                /*box-shadow: 0 0 10px black;*/
-                height: 100%;
-                float: left;
-                background-color: black;
-            }
+        .skills .progress-bar .bar .statistics {
+            width: 90%;
+            grid-area: s1;
+            animation: statistics 2s;
+        }
 
-.skills .progress-bar .bar .statistics {
-    width: 90%;
-    grid-area: s1;
-    animation: statistics 2s;
+@keyframes statistics {
+    0% {
+        width: 0%
+    }
+
+    100% {
+        width: 90%
+    }
 }
-
-        @keyframes statistics {
-            0% {
-                width: 0%
-            }
-
-            100% {
-                width: 90%
-            }
-        }
 
 .skills .progress-bar .bar .shiny {
     width: 95%;
@@ -434,15 +467,15 @@ interests_list li {
     animation: shiny 2s;
 }
 
-        @keyframes shiny {
-            0% {
-                width: 0%
-            }
+@keyframes shiny {
+    0% {
+        width: 0%
+    }
 
-            100% {
-                width: 95%
-            }
-        }
+    100% {
+        width: 95%
+    }
+}
 
 .skills .progress-bar .bar .html {
     width: 20%;
@@ -466,15 +499,15 @@ interests_list li {
     animation: python 2s;
 }
 
-    @keyframes python {
-        0% {
-            width: 0%
-        }
-
-        100% {
-            width: 5%
-        }
+@keyframes python {
+    0% {
+        width: 0%
     }
+
+    100% {
+        width: 5%
+    }
+}
 
 
 .skills .progress-bar .bar .sql {
@@ -502,7 +535,7 @@ interests_list li {
 .skills-icons-icons {
     text-align: center;
     font-size: 32px;
-    color: black;
+    /*color: black;*/
 }
 
     .skills-icons-icons .fab {
@@ -511,7 +544,7 @@ interests_list li {
 
 .Education {
     margin: 20px auto 20px auto;
-    background: white;
+    /*background: white;*/
     text-align: center;
     width: 80%;
 }
@@ -519,7 +552,8 @@ interests_list li {
 .education-title {
     text-align: center;
     font-size: 28px;
-    color: black;
+    /*color: black;*/
+    color: var(--first-color);
     margin-bottom: 20px;
 }
 
@@ -533,7 +567,7 @@ interests_list li {
     grid-template-rows: repeat(1, auto);
     grid-template-areas:
         "d e e";
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--third-color);
     padding-bottom: 8px;
 }
 
@@ -551,7 +585,8 @@ interests_list li {
 .projects-title {
     text-align: center;
     font-size: 28px;
-    color: black;
+    /*color: black;*/
+    color: var(--first-color);
     margin-bottom: 20px;
 }
 
@@ -566,7 +601,7 @@ interests_list li {
     grid-template-areas:
         "ab"
         "prew";
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--third-color);
     padding-bottom: 10px;
 }
 
@@ -579,14 +614,15 @@ interests_list li {
 .project-about-title {
     text-align: center;
     font-size: 32px;
-    color: black;
+    /*color: black;*/
+    color: var(--second-color);
     margin: 15px auto;
 }
 
 .project-about-category {
     text-align: center;
     font-size: 18px;
-    color: black;
+    /*color: black;*/
     margin-bottom: 10px;
 }
 
@@ -603,24 +639,31 @@ interests_list li {
     text-align: center;
     font-size: 28px;
     display: flex;
+    
     align-items: center;
     justify-content: center;
     width: 70%;
     margin: 10px auto;
 }
 
-    .project-preview:hover {
+    .project-preview:hover a{
         font-size: 32px;
     }
 
-    .project-photo{
-        padding-bottom: 8px;
-        border-bottom: 1px solid black;
-    }
+.project-photo {
+    padding-bottom: 8px;
+    /*border-bottom: 1px solid black;*/
+    border-bottom: 1px solid var(--third-color);
+}
 
-    .language {
+.project-photo a{
+    font-size: 26px;
+}
+
+.language {
     margin-left: 10px;
-    color: lightslategray;
+    /*color: lightslategray;*/
+    color: #cccccc;
 }
 
 /*********************************************************************************************************************************/
@@ -675,6 +718,7 @@ interests_list li {
         grid-area: l;
         margin: auto;
         text-align: center;
+
     }
 
     .basic-info {
