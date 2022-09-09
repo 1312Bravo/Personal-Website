@@ -579,9 +579,9 @@ a {
     /*color: black;*/
 }
 
-    .moveup:hover {
-        transform: translateY(-15px);
-    }
+.moveup:hover {
+    transform: translateY(-15px);
+}
 
     .skills-icons-icons .fab {
         margin: 0 15px 20px 15px;
