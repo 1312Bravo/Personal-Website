@@ -18,7 +18,10 @@
 }
 
 body {
-    background-color: var(--bckg-color);
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("bckgrnd3.jpg");
+    /*background-repeat: no-repeat;*/
+    background-size: 100% 100%;
+    /*background-color: var(--bckg-color);*/
     color: var(--first-color);
     height: auto;
     width: 100vw;
@@ -34,7 +37,47 @@ a {
 }
 
 .clrd1{
-    color: var(--second-color)
+    color: var(--second-color);
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /*********************************************************************************************************************************/
@@ -84,6 +127,7 @@ a {
     display: flex;
     justify-content: center;
     padding: 20px;
+    animation: slideInFromTop 0.6s ease-in;
 }
 
     .ProfilePhoto img {
@@ -128,9 +172,9 @@ a {
     }
 
 
-.fa-download {
-    margin-left: 10px;
-}
+    .fa-download {
+        margin-left: 10px;
+    }
 
 .Interests_list {
     grid-area: l;
@@ -148,19 +192,18 @@ a {
         list-style-type: circle;
     }
 
-interests_list li {
-    margin: 24px 0;
-    padding-bottom: 2px;
-    /*border-bottom: 1px solid black;*/
-    border-bottom: 1px solid var(--third-color);
-}
-
-
-/*********************************************************************************************************************************/
+    interests_list li {
+        margin: 24px 0;
+        padding-bottom: 2px;
+        /*border-bottom: 1px solid black;*/
+        border-bottom: 1px solid var(--third-color);
+    }
+    /*********************************************************************************************************************************/
 .basic-info {
     margin: 0 auto 20px auto;
     /*background: white;*/
     text-align: center;
+    animation: slideInFromTop 0.6s ease-in;
 }
 
     .basic-info .info-title {
@@ -216,41 +259,38 @@ interests_list li {
             "c1 c2";
     }
 
-        .info-list .info-row .col1 {
-            text-align: center;
-            grid-area: c1;
-            /*border-bottom: 1px lightslategray solid;*/
-            border-bottom: 1px var(--third-color) solid;
-        }
+    .info-list .info-row .col1 {
+        text-align: center;
+        grid-area: c1;
+        /*border-bottom: 1px lightslategray solid;*/
+        border-bottom: 1px var(--third-color) solid;
+    }
 
-        .info-list .info-row .col2 {
-            text-align: center;
-            grid-area: c2;
-            /*border-bottom: 1px lightslategray solid;*/
-            border-bottom: 1px var(--third-color) solid;
-        }
-
-
-
-/*********************************************************************************************************************************/
-.Kvovt {
-    /* background-color: white;*/
-    color: #808080;
-    font-size: large;
-    text-align: center;
-    padding: 20px;
-    margin: 0 auto;
-    position: absolute;
-    bottom: 3%;
-    width: 100%;
-}
-
-/*********************************************************************************************************************************/
+    .info-list .info-row .col2 {
+        text-align: center;
+        grid-area: c2;
+        /*border-bottom: 1px lightslategray solid;*/
+        border-bottom: 1px var(--third-color) solid;
+    }
+    /*********************************************************************************************************************************/
+    .Kvovt {
+        /* background-color: white;*/
+        color: #808080;
+        font-size: large;
+        text-align: center;
+        padding: 20px;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 3%;
+        width: 100%;
+    }
+    /*********************************************************************************************************************************/
 
 .social-media {
     /*background: white;*/
     margin: 10px auto;
     width: 85%;
+    animation: slideInFromBottom 0.6s ease-in;
 }
 
     .social-media .second-title {
@@ -282,80 +322,81 @@ interests_list li {
         border-bottom: 1px var(--third-color) solid;
     }
 
-        .social-media a:hover {
-            font-size: 40px;
-        }
+    .social-media a:hover {
+        /*font-size: 40px;*/
+        transform: rotate(0.05turn);
+    }
+    /*********************************************************************************************************************************/
 
-/*********************************************************************************************************************************/
+    .send-mail .container {
+        margin: 0 20px;
+        padding: 20px 0;
+        /*background: white;*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.send-mail .container {
-    margin: 0 20px;
-    padding: 20px 0;
-    /*background: white;*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .send-mail .mail-title {
+        text-align: center;
+        font-size: 28px;
+        /*color: black;*/
+        color: var(--first-color);
+        margin: 0 0 20px 0;
+    }
 
-.send-mail .mail-title {
-    text-align: center;
-    font-size: 28px;
-    /*color: black;*/
-    color: var(--first-color);
-    margin: 0 0 20px 0;
-}
+    .send-mail .email-inputs {
+        display: block;
+        /*background: white;*/
+        width: 110%;
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 0px;
+        border-radius: 10px;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(6, 55px);
+        grid-template-areas:
+            ". . a a a a a . ."
+            ". . s s s s s . ."
+            "m m m m m m m m m"
+            "m m m m m m m m m"
+            "m m m m m m m m m"
+            ". . b b b b b . .";
+    }
 
-.send-mail .email-inputs {
-    display: block;
-    /*background: white;*/
-    width: 110%;
-    margin: 0 auto;
-    display: grid;
-    grid-gap: 0px;
-    border-radius: 10px;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(6, 55px);
-    grid-template-areas:
-        ". . a a a a a . ."
-        ". . s s s s s . ."
-        "m m m m m m m m m"
-        "m m m m m m m m m"
-        "m m m m m m m m m"
-        ". . b b b b b . .";
-}
+    .email-inputs .adress {
+        grid-area: a;
+    }
 
-.email-inputs .adress {
-    grid-area: a;
-}
+    .email-inputs .subject {
+        grid-area: s;
+    }
 
-.email-inputs .subject {
-    grid-area: s;
-}
+    .email-inputs .message {
+        grid-area: m;
+    }
 
-.email-inputs .message {
-    grid-area: m;
-}
+    .email-inputs .subject {
+        grid-area: s;
+    }
 
-.email-inputs .subject {
-    grid-area: s;
-}
+    .email-inputs .email-button {
+        grid-area: b;
+    }
 
-.email-inputs .email-button {
-    grid-area: b;
-}
-
-.send-mail .email-form {
-    margin: 10px;
-    padding: 5px 10px;
-    border-radius: 20px;
-    /*border: 1px solid black;*/
-    border: 1px solid var(--first-color);
-    outline-style: none;
-    font-size: 18px;
-    font-weight: 500;
-    background: var(--bckg-color);
-    color: white;
-}
+    .send-mail .email-form {
+        margin: 10px;
+        padding: 5px 10px;
+        border-radius: 20px;
+        /*border: 1px solid black;*/
+        border: 1px solid var(--first-color);
+        outline-style: none;
+        font-size: 18px;
+        font-weight: 500;
+        /*background: var(--bckg-color);*/
+        background-color: transparent;
+        color: white;
+    }
 
     .send-mail .email-form:focus {
         /*background-color: white;*/
@@ -373,55 +414,54 @@ interests_list li {
         /*transform: translate3d(0,24px,0)*/
     }
 
-.send-mail .email-button {
-    width: 50%;
-    padding: 5px;
-    margin: 5px auto;
-    /*border: 1px solid black;*/
-    border: 1px solid white;
-    border-radius: 20px;
-    /*background-color: white;*/
-    font-size: 18px;
-    font-weight: bold;
-}
+    .send-mail .email-button {
+        width: 50%;
+        padding: 5px;
+        margin: 5px auto;
+        /*border: 1px solid black;*/
+        border: 1px solid white;
+        border-radius: 20px;
+        /*background-color: white;*/
+        font-size: 18px;
+        font-weight: bold;
+    }
 
     .send-mail .email-button:hover {
         /*border: 2px solid black;*/
         border: 2px solid white;
     }
+    /*********************************************************************************************************************************/
 
-/*********************************************************************************************************************************/
+    .skills {
+        margin: 0 auto 20px auto;
+        /*background: white;*/
+        text-align: center;
+    }
 
-.skills {
-    margin: 0 auto 20px auto;
-    /*background: white;*/
-    text-align: center;
-}
+    .skills-title {
+        text-align: center;
+        font-size: 28px;
+        /*color: black;*/
+        color: var(--first-color);
+        margin-bottom: 20px;
+    }
 
-.skills-title {
-    text-align: center;
-    font-size: 28px;
-    /*color: black;*/
-    color: var(--first-color);
-    margin-bottom: 20px;
-}
-
-.skills .progress-bar {
-    /*background: white;*/
-    margin: 0 auto;
-    display: grid;
-    grid-gap: 0px;
-    display: grid;
-    grid-gap: 12px;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(5, 45px);
-    grid-template-areas:
-        "s1"
-        "s2"
-        "s3"
-        "s4"
-        "s5";
-}
+    .skills .progress-bar {
+        /*background: white;*/
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 0px;
+        display: grid;
+        grid-gap: 12px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(5, 45px);
+        grid-template-areas:
+            "s1"
+            "s2"
+            "s3"
+            "s4"
+            "s5";
+    }
 
     .skills .progress-bar .one-skill-title {
         margin-bottom: 10px;
@@ -438,22 +478,22 @@ interests_list li {
         /*box-shadow: 0 0 10px black;*/
     }
 
-        .skills .progress-bar .bar span {
-            /*box-shadow: 0 0 10px black;*/
-            height: 100%;
-            float: left;
-            /*background-color: black;*/
-            background-color: var(--first-color);
-        }
+    .skills .progress-bar .bar span {
+        /*box-shadow: 0 0 10px black;*/
+        height: 100%;
+        float: left;
+        /*background-color: black;*/
+        background-color: var(--first-color);
+    }
 
-        .skills .progress-bar .bar .statistics {
-            width: 90%;
-            grid-area: s1;
-            animation: statistics 2s;
-        }
+    .skills .progress-bar .bar .statistics {
+        width: 90%;
+        grid-area: s1;
+        animation: statistics 2s;
+    }
 
-@keyframes statistics {
-    0% {
+    @keyframes statistics {
+        0% {
         width: 0%
     }
 
@@ -539,6 +579,10 @@ interests_list li {
     /*color: black;*/
 }
 
+    .moveup:hover {
+        transform: translateY(-15px);
+    }
+
     .skills-icons-icons .fab {
         margin: 0 15px 20px 15px;
     }
@@ -604,12 +648,14 @@ interests_list li {
         "prew";
     border-bottom: 1px solid var(--third-color);
     padding-bottom: 10px;
+    animation: slideInFromBottom 0.6s ease-in;
 }
 
 .project-about {
     position: relative;
     grid-area: ab;
     margin: 0 auto;
+    
 }
 
 .project-about-title {
@@ -640,7 +686,6 @@ interests_list li {
     text-align: center;
     font-size: 28px;
     display: flex;
-    
     align-items: center;
     justify-content: center;
     width: 70%;
