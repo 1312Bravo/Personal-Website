@@ -492,7 +492,7 @@ interests_list li {
 }
 
 .skills .progress-bar .bar .statistics {
-    width: 90%;
+    width: 80%;
     grid-area: s1;
     animation: statistics 2s;
 }
@@ -503,12 +503,12 @@ interests_list li {
     }
 
     100% {
-        width: 90%
+        width: 80%
     }
 }
 
 .skills .progress-bar .bar .shiny {
-    width: 95%;
+    width: 80%;
     grid-area: s2;
     animation: shiny 2s;
 }
@@ -519,13 +519,13 @@ interests_list li {
     }
 
     100% {
-        width: 95%
+        width: 80%
     }
 }
 
 .skills .progress-bar .bar .html {
-    width: 20%;
-    grid-area: s3;
+    width: 15%;
+    grid-area: s5;
     animation: html 2s;
 }
 
@@ -535,13 +535,13 @@ interests_list li {
     }
 
     100% {
-        width: 20%
+        width: 15%
     }
 }
 
 .skills .progress-bar .bar .python {
-    width: 5%;
-    grid-area: s4;
+    width: 80%;
+    grid-area: s3;
     animation: python 2s;
 }
 
@@ -551,14 +551,14 @@ interests_list li {
     }
 
     100% {
-        width: 5%
+        width: 80%
     }
 }
 
 
 .skills .progress-bar .bar .sql {
-    width: 15%;
-    grid-area: s5;
+    width: 70%;
+    grid-area: s4;
     animation: sql 2s;
 }
 
@@ -568,14 +568,8 @@ interests_list li {
     }
 
     100% {
-        width: 15%
+        width: 70%
     }
-}
-
-.skills .progress-bar .bar .html {
-    width: 20%;
-    grid-area: s3;
-    animation: html 2s;
 }
 
 .skills-icons-icons {
